@@ -1,13 +1,12 @@
-board = [1,2,3,4,5,6,7,8,9]
+board = list(range(1,10))
 
 def draw_board():
-    print("\n" + str(board[0]) + " | " + str(board[1]) + " | " + str(board[2]) + "\n" + 
-        "---------" + "\n" + 
-        str(board[3]) + " | " + str(board[4]) + " | " + str(board[5]) + "\n" +
-        "---------" "\n" +
-        str(board[6]) + " | " + str(board[7]) + " | " + str(board[8]) + "\n")
-
-#win = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
+    print(""" 
+        {} | {} | {}   
+        ---------  
+        {} | {} | {}   
+        ---------  
+        {} | {} | {}""".format(*board))
 
 def win():
     for i in range(0, len(board), 3):
