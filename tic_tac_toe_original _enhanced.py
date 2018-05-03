@@ -1,4 +1,4 @@
-board = [1,2,3,4,5,6,7,8,9]
+board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def draw_board():
     print("\n" + str(board[0]) + " | " + str(board[1]) + " | " + str(board[2]) + "\n" + 
@@ -7,7 +7,7 @@ def draw_board():
         "---------" "\n" +
         str(board[6]) + " | " + str(board[7]) + " | " + str(board[8]) + "\n")
 
-#win = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
+# win = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
 
 def win():
     for i in range(0, len(board), 3):
@@ -21,9 +21,7 @@ def win():
     elif len(set(board[2:7:2])) == 1:
         print("win")
 
-
-
-#X turn
+# players turns
 
 def p1_turn():
     p1 = input("Player 1! Enter a number for the desired slot: ")
@@ -43,7 +41,6 @@ def p1_turn():
         board[p1-1] = "X"
         draw_board()
 
-#O turn
 
 def p2_turn():
     p2 = input("Player 2! Enter a number for the desired slot: ")
