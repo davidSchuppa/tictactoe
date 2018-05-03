@@ -9,41 +9,19 @@ def draw_board():
 
 #win = [(0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6)]
 
-def x_win():
-    if board[0] == "X" and board[1] == "X" and board[2] == "X":
-        return True
-    elif board[3] == "X" and board[4] == "X" and board[5] == "X":
-        return True
-    elif board[6] == "X" and board[7] == "X" and board[8] == "X":
-        return True
-    elif board[0] == "X" and board[3] == "X" and board[6] == "X":
-        return True
-    elif board[1] == "X" and board[4] == "X" and board[7] == "X":
-        return True
-    elif board[2] == "X" and board[5] == "X" and board[8] == "X":
-        return True
-    elif board[0] == "X" and board[4] == "X" and board[8] == "X":
-        return True
-    elif board[2] == "X" and board[4] == "X" and board[6] == "X":
-        return True
+def win():
+    for i in range(0, len(board), 3):
+        if len(set(board[i:i+3])) == 1:
+            print("win")
+    for i in range(0, 3):
+        if len(set(board[i::3])) == 1:
+            print("win")
+    if len(set(board[0::4])) == 1:
+        print("win")
+    elif len(set(board[2:7:2])) == 1:
+        print("win")
 
-def o_win():
-    if board[0] == "O" and board[1] == "O" and board[2] == "O":
-        return True
-    elif board[3] == "O" and board[4] == "O" and board[5] == "O":
-        return True
-    elif board[6] == "O" and board[7] == "O" and board[8] == "O":
-        return True
-    elif board[0] == "O" and board[3] == "O" and board[6] == "O":
-        return True
-    elif board[1] == "O" and board[4] == "O" and board[7] == "O":
-        return True
-    elif board[2] == "O" and board[5] == "O" and board[8] == "O":
-        return True
-    elif board[0] == "O" and board[4] == "O" and board[8] == "O":
-        return True
-    elif board[2] == "O" and board[4] == "O" and board[6] == "O":
-        return True
+
 
 #X turn
 
