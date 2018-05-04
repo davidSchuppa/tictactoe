@@ -35,7 +35,7 @@ while turn_counter <= 9:
         mark = "X"
 
     try:
-        player = int(input("Player" + mark + "! Enter a number for the desired slot: ")) - 1
+        player = int(input("Player " + mark + "! Enter a number for the desired slot: ")) - 1
         assert player >= 0
 
         if str(board[player]).isnumeric():
@@ -49,7 +49,7 @@ while turn_counter <= 9:
         continue
 
     if win():
-        print("win")
+        print("Win!!!")
         break
 
     turn_counter += 1
